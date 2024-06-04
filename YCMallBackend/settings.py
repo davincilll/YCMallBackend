@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+jg=@r90@jj&ygy%@0uyi43=hox8v-(((2!ga#mdhk*i)pnlgu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["yc.mychats.tech"]
 
 
 # Application definition
