@@ -26,6 +26,6 @@ toCategoryTypeRouter.register(r'categorytype', views.CategoryTypeViewSet, basena
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('yaocai/', include(toYaocaiRouter.urls)),
-    path('categoryType/', include(toCategoryTypeRouter.urls))
+    path('api/', include(toYaocaiRouter.urls)),
+    path('api/', include(toCategoryTypeRouter.urls))
 ]
