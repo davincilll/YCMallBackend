@@ -88,7 +88,7 @@ class Command(BaseCommand):
                     img_url = "http://www.cnzyao.com" + img.get('src')
                     for dl in arcbody.find_all('dl'):
                         dt = dl.find('dt')
-                        if dt and dt.text.strip() == '【形态特征】：':
+                        if dt and dt.text.strip() == '【用法用量】：':
                             dd = dl.find('dd')
                             if dd:
                                 feature_content = dd.text.strip()

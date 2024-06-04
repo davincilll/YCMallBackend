@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+jg=@r90@jj&ygy%@0uyi43=hox8v-(((2!ga#mdhk*i)pnlgu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["yc.mychats.tech"]
+ALLOWED_HOSTS = ["yc.mychats.tech","localhost"]
 
 
 # Application definition
@@ -126,3 +126,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, '../YCMallBackend/static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
