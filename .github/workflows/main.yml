@@ -22,9 +22,9 @@ jobs:
             fi
             cd /home/ubuntu/YCMallBackend/YCMallBackend
             # 删除源代码
-            rm -r ./YCMailBackend
+            rm -r ./YCMallBackend
             # 拉取代码
             git clone git@github.com:davincilll/YCMailBackend.git
             sleep 30
             # 删除容器及镜像
-            /home/ubuntu/DesktopCloud/delete.sh
+            /home/ubuntu/YCMailBackend/delete.sh
