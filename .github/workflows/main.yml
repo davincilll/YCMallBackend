@@ -24,7 +24,7 @@ jobs:
             # 删除源代码
             rm -r ./YCMallBackend
             # 拉取代码
-            git clone git@github.com:davincilll/YCMallBackend.git
+            git clone https://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@github.com/davincilll/YCMallBackend.git
             sleep 30
             # 删除容器及镜像
             /home/ubuntu/YCMallBackend/delete.sh
