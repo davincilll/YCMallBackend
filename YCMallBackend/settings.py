@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "Users",
     "Yaocai",
+    "django_filters"
 ]
 
 MIDDLEWARE = [
