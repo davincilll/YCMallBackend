@@ -27,4 +27,4 @@ jobs:
             git clone git@github.com:davincilll/YCMailBackend.git
             sleep 30
             # 删除容器及镜像
-            /home/ubuntu/YCMailBackend/delete.sh
+            /home/ubuntu/YCMallBackend/delete.sh
