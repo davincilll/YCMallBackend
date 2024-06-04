@@ -1,0 +1,30 @@
+name: 自动部署
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH 命令拉取代码
+        uses: appleboy/ssh-action@master
+        with:
+          host: 43.134.84.199
+          username: root
+          password: LDtxy2406,
+          script: |
+            if ! command -v git &> /dev/null
+            then
+              sudo apt-get -y install git
+            fi
+            cd /home/ubuntu/DesktopCloud/DesktopCloud
+            # 删除源代码
+            rm -r ./DesktopCloud
+            # 拉取代码
+            git clone git@github.com:davincilll/DesktopCloud.git
+            sleep 30
+            # 删除容器及镜像
+            /home/ubuntu/DesktopCloud/delete.sh
