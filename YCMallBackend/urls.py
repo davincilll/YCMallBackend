@@ -18,14 +18,18 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
+import Yaocai
 from Yaocai import views
+
 toYaocaiRouter = DefaultRouter()
-toYaocaiRouter.register(r'yaocai', views.YaocaiViewSet, basename='Yaocai')
+toYaocaiRouter.register(r'yaocai', Yaocai.views.YaocaiViewSet, basename='Yaocai')
 toCategoryTypeRouter = DefaultRouter()
 toCategoryTypeRouter.register(r'categorytype', views.CategoryTypeViewSet, basename='CategoryType')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/user/', include('Users.urls')),
     path('api/', include(toYaocaiRouter.urls)),
-    path('api/', include(toCategoryTypeRouter.urls))
+    path('api/', include(toCategoryTypeRouter.urls)),
+
 ]
