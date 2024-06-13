@@ -11,7 +11,7 @@ def login(request):
     if User.objects.filter(username=username, password=password).exists():
         user = User.objects.get(username=username, password=password)
         serializer = UserSerializer(user)
-        return Response({'code': 0, 'message': '登陆成功', 'data': {serializer.data}})
+        return Response({'code': 0, 'message': '登陆成功', 'data': serializer.data})
 
 
 @api_view(['POST'])
@@ -23,4 +23,4 @@ def register(request):
     else:
         user = User.objects.create(username=username, password=password)
         serializer = UserSerializer(user)
-        return Response({'code': 0, 'message': '注册成功', 'data': {serializer.data}})
+        return Response({'code': 0, 'message': '注册成功', 'data': serializer.data})
